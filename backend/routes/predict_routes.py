@@ -1,10 +1,11 @@
 from flask import Blueprint, request, jsonify
 from backend.ml.inference import MLInferenceService
+from backend.llm.gemini_service import GeminiService
 
 predict_bp = Blueprint("predict", __name__)
 
-# Initialize ML service once
 ml_service = MLInferenceService()
+llm_service = GeminiService()
 
 
 @predict_bp.route("/api/predict", methods=["POST"])
@@ -12,23 +13,36 @@ def predict():
     data = request.get_json()
 
     if not data or "symptoms" not in data:
-        return jsonify({
-            "error": "Missing 'symptoms' field in request body"
-        }), 400
+        return jsonify({"error": "Missing 'symptoms' field"}), 400
 
-    symptoms_text = data["symptoms"].strip()
+    symptoms = data["symptoms"].strip()
 
-    if not symptoms_text:
-        return jsonify({
-            "error": "Symptoms text cannot be empty"
-        }), 400
+    if not symptoms:
+        return jsonify({"error": "Symptoms cannot be empty"}), 400
+
+    result = ml_service.predict(symptoms)
+
+    response = {
+        "ml_result": result,
+        "llm": None
+    }
 
     try:
-        result = ml_service.predict(symptoms_text)
-        return jsonify(result), 200
+        if not result["is_confident"]:
+            response["llm"] = {
+                "type": "follow_up_questions",
+                "content": llm_service.generate_followup_questions(symptoms)
+            }
+        else:
+            response["llm"] = {
+                "type": "explanation",
+                "content": llm_service.generate_explanation(result["prediction"])
+            }
 
-    except Exception as e:
-        return jsonify({
-            "error": "Internal server error",
-            "details": str(e)
-        }), 500
+    except Exception:
+        response["llm"] = {
+            "type": "unavailable",
+            "content": "AI explanation service is currently unavailable."
+        }
+
+    return jsonify(response), 200
