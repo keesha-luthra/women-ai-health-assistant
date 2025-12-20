@@ -12,21 +12,21 @@ HerHealth AI is a safety-aware AI health assistant that combines:
 ### 1️⃣ Confidence-Based Gating & Safe Mode
 When model confidence is low or the condition is high-risk, the system avoids unsafe predictions and asks follow-up questions instead.
 
-![Low Confidence Follow-up]("C:\Users\KEESHA LUTHRA\OneDrive\Pictures\Screenshots\Screenshot 2025-12-20 203933.png")
+![Low Confidence Follow-up](screenshots/1.png)
 
 ---
 
 ### 2️⃣ High-Confidence Direct Prediction
 When confidence is high and symptoms are specific, the model provides a direct prediction with clear confidence.
 
-![High Confidence Prediction]("C:\Users\KEESHA LUTHRA\OneDrive\Pictures\Screenshots\Screenshot 2025-12-20 203858.png")
+![High Confidence Prediction](screenshots/2.png)
 
 ---
 
 ### 3️⃣ High-Risk Symptom Handling
 For potentially dangerous symptoms, the system enforces Safe Mode even if confidence is high.
 
-![High Risk Safe Mode]("C:\Users\KEESHA LUTHRA\OneDrive\Pictures\Screenshots\Screenshot 2025-12-20 203806.png")
+![High Risk Safe Mode](screenshots/3.png)
 
 ---
 
