@@ -1,54 +1,80 @@
-import pickle
 import os
 import numpy as np
-
-MODEL_PATH = "models/symptom_classifier.pkl"
-LOW_CONFIDENCE_THRESHOLD = 0.5
+import joblib
+from backend.services.image_feature_service import ImageFeatureService
 
 
 class MLInferenceService:
+    """
+    Handles ML inference for the application.
+
+    Supports:
+    - Text-only inference (default)
+    - Text + image inference (optional, supporting signal)
+
+    The final prediction is always made by a classical ML model.
+    """
+
     def __init__(self):
-        if not os.path.exists(MODEL_PATH):
-            raise FileNotFoundError(
-                "Trained ML model not found. Please train the model first."
-            )
+        # Load model artifacts relative to this file
+        base_dir = os.path.dirname(__file__)
 
-        with open(MODEL_PATH, "rb") as f:
-            self.pipeline = pickle.load(f)
+        self.vectorizer = joblib.load(
+            os.path.join(base_dir, "tfidf_vectorizer.pkl")
+        )
+        self.model = joblib.load(
+            os.path.join(base_dir, "logistic_model.pkl")
+        )
+        self.labels = joblib.load(
+            os.path.join(base_dir, "labels.pkl")
+        )
 
-        # Class labels learned by Logistic Regression
-        self.labels = self.pipeline.classes_
+        # Image feature extractor (pretrained CNN, frozen)
+        self.image_service = ImageFeatureService()
 
-    def predict(self, text: str):
+    def predict(self, symptoms_text: str, image_path: str = None):
         """
-        Predict condition probabilities from symptom text.
+        Perform inference using text features and optional image features.
+
+        Args:
+            symptoms_text (str): User-provided symptom description
+            image_path (str, optional): Path to uploaded image
 
         Returns:
-            dict: {
-                prediction: str,
-                confidence: float,
-                is_confident: bool,
-                probabilities: {label: probability}
-            }
+            dict: Prediction result with confidence and metadata
         """
 
-        # Predict probabilities
-        probabilities = self.pipeline.predict_proba([text])[0]
+        # ---------------- TEXT FEATURES ----------------
+        text_features = self.vectorizer.transform(
+            [symptoms_text]
+        ).toarray()
 
-        # Find top prediction
-        top_index = np.argmax(probabilities)
-        top_label = self.labels[top_index]
-        top_confidence = probabilities[top_index]
+        # ---------------- IMAGE FEATURES (OPTIONAL) ----------------
+        if image_path:
+            image_features = self.image_service.extract_features(image_path)
+            image_features = image_features.reshape(1, -1)
 
-        # Confidence check
-        is_confident = bool(top_confidence >= LOW_CONFIDENCE_THRESHOLD)
+            # Combine text + image features
+            combined_features = np.hstack(
+                [text_features, image_features]
+            )
+        else:
+            combined_features = text_features
+
+        # ---------------- MODEL PREDICTION ----------------
+        probabilities = self.model.predict_proba(combined_features)[0]
+        max_index = probabilities.argmax()
+
+        prediction = self.labels[max_index]
+        confidence = float(probabilities[max_index])
 
         return {
-            "prediction": top_label,
-            "confidence": round(float(top_confidence), 3),
-            "is_confident": is_confident,
+            "prediction": prediction,
+            "confidence": round(confidence, 3),
+            "is_confident": confidence >= 0.6,
             "probabilities": {
                 label: round(float(prob), 3)
                 for label, prob in zip(self.labels, probabilities)
-            }
+            },
+            "used_image": bool(image_path)
         }
