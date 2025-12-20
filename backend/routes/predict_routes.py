@@ -5,47 +5,73 @@ from flask import Blueprint, request, jsonify, current_app
 from backend.ml.inference import MLInferenceService
 from backend.ml.image_inference import ImageInferenceService
 from backend.services.decision_service import DecisionService
-from backend.llm.gemini_service import GeminiService
 from backend.services.women_health_service import WomenHealthService
+from backend.llm.openai_service import OpenAIService
+
+# ---------------- CONFIG ----------------
+
+CONFIDENCE_THRESHOLD = 60  # percent (0–100)
+
+HIGH_RISK_CONDITIONS = {
+    "melanoma",
+    "cancer",
+    "tumor",
+    "breast cancer",
+    "ovarian cancer"
+}
+
+# ---------------- INIT ----------------
 
 predict_bp = Blueprint("predict", __name__)
 
 ml_service = MLInferenceService()
 image_service = ImageInferenceService()
-llm_service = GeminiService()
+llm_service = OpenAIService()
 
+# ---------------- ROUTE ----------------
 
 @predict_bp.route("/api/predict", methods=["POST"])
 def predict():
-    # ---------------- TEXT INPUT ----------------
+    # ---------------- INPUT ----------------
     symptoms = request.form.get("symptoms", "").strip()
     if not symptoms:
         return jsonify({"error": "Symptoms are required"}), 400
 
-    # ---------------- OPTIONAL IMAGE ----------------
     image = request.files.get("image")
     image_path = None
 
     if image:
         filename = f"{uuid.uuid4().hex}_{image.filename}"
-        upload_path = os.path.join(
-            current_app.config["UPLOAD_FOLDER"], filename
-        )
-        image.save(upload_path)
-        image_path = upload_path
+        image_path = os.path.join(current_app.config["UPLOAD_FOLDER"], filename)
+        image.save(image_path)
 
-    # ---------------- TEXT ML INFERENCE ----------------
+    # ---------------- ML INFERENCE ----------------
     ml_result = ml_service.predict(symptoms)
 
-    # ---------------- IMAGE ANALYSIS (SEPARATE MODEL) ----------------
+    confidence = float(ml_result.get("confidence", 0))  # expected 0–100
+    prediction = ml_result.get("prediction", "").lower()
+
+    # ---------------- CONFIDENCE GATING ----------------
+    is_confident = confidence >= CONFIDENCE_THRESHOLD
+    is_high_risk = prediction in HIGH_RISK_CONDITIONS
+    safe_mode = (not is_confident) or (is_high_risk and not image_path)
+
+    ml_result["is_confident"] = is_confident
+    ml_result["safe_mode"] = safe_mode
+
+    if safe_mode:
+        ml_result["prediction"] = "Insufficient information"
+        ml_result["confidence_note"] = (
+            "More details are needed before suggesting any condition."
+        )
+
+    # ---------------- IMAGE ANALYSIS ----------------
     image_analysis = None
     decision_note = None
 
-    if image_path:
+    if image_path and not safe_mode:
         image_analysis = image_service.analyze_image(image_path)
-        decision_note = DecisionService.combine(
-            ml_result, image_analysis
-        )
+        decision_note = DecisionService.combine(ml_result, image_analysis)
 
     # ---------------- WOMEN HEALTH CONTEXT ----------------
     women_context = WomenHealthService.is_women_health_context(symptoms)
@@ -58,33 +84,43 @@ def predict():
         "condition_related": women_condition
     }
 
-    # ---------------- RESPONSE BASE ----------------
+    # ---------------- LLM LOGIC ----------------
+    llm_payload = None
+
+    if safe_mode:
+        # 🔒 SAFE MODE (NO EXTERNAL AI REQUIRED)
+        llm_payload = {
+            "type": "safe_mode",
+            "content": (
+                "To better understand what you’re experiencing, a few follow-up "
+                "questions would help. For example:\n\n"
+                "• How long have you noticed these symptoms?\n"
+                "• Have they been getting worse or changing?\n"
+                "• Are there any other symptoms you’ve observed?"
+            )
+        }
+
+    elif not is_confident:
+        # 🤖 LOW CONFIDENCE → LLM FOLLOW-UPS
+        try:
+            followups = llm_service.generate_followup_questions(symptoms)
+            llm_payload = {
+                "type": "followup",
+                "content": followups
+            }
+        except Exception:
+            llm_payload = {
+                "type": "unavailable",
+                "content": "AI follow-up questions are currently unavailable."
+            }
+
+    # ---------------- RESPONSE ----------------
     response = {
         "ml_result": ml_result,
         "image_analysis": image_analysis,
         "decision_note": decision_note,
-        "llm": None
+        "llm": llm_payload
     }
-
-    # ---------------- OPTIONAL LLM ----------------
-    try:
-        if not ml_result["is_confident"]:
-            response["llm"] = {
-                "type": "follow_up_questions",
-                "content": llm_service.generate_followup_questions(symptoms)
-            }
-        else:
-            response["llm"] = {
-                "type": "explanation",
-                "content": llm_service.generate_explanation(
-                    ml_result["prediction"]
-                )
-            }
-    except Exception:
-        response["llm"] = {
-            "type": "unavailable",
-            "content": "AI explanation service is currently unavailable."
-        }
 
     # ---------------- DISCLAIMER ----------------
     if women_context:

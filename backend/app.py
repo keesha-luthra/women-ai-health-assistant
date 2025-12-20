@@ -3,6 +3,7 @@ from flask import Flask, send_from_directory
 from backend.config import Config
 from backend.routes.predict_routes import predict_bp
 from backend.routes.health_routes import health_bp
+from backend.routes.llm_routes import llm_bp
 
 
 def create_app():
@@ -11,6 +12,8 @@ def create_app():
         static_folder="static",
         static_url_path="/static"
     )
+
+    app.register_blueprint(llm_bp)
 
     app.config.from_object(Config)
 

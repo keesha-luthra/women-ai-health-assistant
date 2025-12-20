@@ -47,38 +47,70 @@ function displayResult(data) {
 
   const ml = data.ml_result;
 
+  /* ---------- ML RESULT ---------- */
   resultDiv.innerHTML += `
-    <div class="label">Possible condition:</div>
-    <div>${ml.prediction}</div>
-
-    <div class="label">Confidence:</div>
-    <div>${ml.confidence}</div>
+    <div class="section">
+      <div class="section-title">ML Prediction</div>
+      <p><strong>Possible condition:</strong> ${ml.prediction}</p>
+      <p><strong>Confidence:</strong> ${ml.confidence.toFixed(1)}%</p>
+    </div>
   `;
 
+  /* ---------- IMAGE SIGNAL ---------- */
   if (ml.used_image) {
     resultDiv.innerHTML += `
-      <div class="label">Image used:</div>
-      <div>Yes (as a supporting signal)</div>
+      <div class="section">
+        <div class="section-title">Image Used</div>
+        <p>The uploaded image was used as a supporting signal.</p>
+      </div>
     `;
   }
 
   if (data.decision_note) {
     resultDiv.innerHTML += `
-      <div class="label">Image insight:</div>
-      <div>${data.decision_note}</div>
+      <div class="section">
+        <div class="section-title">Image Insight</div>
+        <p>${data.decision_note}</p>
+      </div>
     `;
   }
 
-  if (data.llm && data.llm.type !== "unavailable") {
-    resultDiv.innerHTML += `
-      <div class="label">Additional guidance:</div>
-      <div>${data.llm.content}</div>
-    `;
+  /* ---------- LLM / FOLLOW-UP LOGIC ---------- */
+  if (data.llm) {
+    if (data.llm.type === "followup") {
+      resultDiv.innerHTML += `
+        <div class="section followup-box">
+          <div class="section-title">We need a bit more information 💬</div>
+          <p>${data.llm.content}</p>
+        </div>
+      `;
+    }
+
+    else if (data.llm.type === "safe_mode") {
+      resultDiv.innerHTML += `
+        <div class="section warning">
+          <div class="section-title">AI Safe Mode</div>
+          <p>${data.llm.content}</p>
+        </div>
+      `;
+    }
+
+    else if (data.llm.type === "unavailable") {
+      resultDiv.innerHTML += `
+        <div class="section warning">
+          <div class="section-title">AI Safe Mode</div>
+          <p>AI follow-up questions are currently unavailable.</p>
+        </div>
+      `;
+    }
   }
 
+  /* ---------- DISCLAIMER ---------- */
   if (data.disclaimer) {
     resultDiv.innerHTML += `
-      <div class="disclaimer">${data.disclaimer}</div>
+      <div class="disclaimer">
+        ${data.disclaimer}
+      </div>
     `;
   }
 

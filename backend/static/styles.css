@@ -71,4 +71,29 @@ body {
     color: #777;
     margin-top: 10px;
   }
+
+  .section {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #fff0f6;
+  }
+  
+  .section-title {
+    font-weight: 600;
+    color: #c2185b;
+    margin-bottom: 6px;
+  }
+  
+  .warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+  }
+  
   

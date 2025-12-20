@@ -1,80 +1,42 @@
 import os
-import numpy as np
 import joblib
-from backend.services.image_feature_service import ImageFeatureService
-
+from sklearn.feature_extraction.text import HashingVectorizer
+import numpy as np
 
 class MLInferenceService:
-    """
-    Handles ML inference for the application.
-
-    Supports:
-    - Text-only inference (default)
-    - Text + image inference (optional, supporting signal)
-
-    The final prediction is always made by a classical ML model.
-    """
-
     def __init__(self):
-        # Load model artifacts relative to this file
         base_dir = os.path.dirname(__file__)
+        model_path = os.path.join(base_dir, "svm_model.pkl")
 
-        self.vectorizer = joblib.load(
-            os.path.join(base_dir, "tfidf_vectorizer.pkl")
+        self.model = joblib.load(model_path)
+
+        # Must match training config
+        self.vectorizer = HashingVectorizer(
+            n_features=2**12,
+            alternate_sign=False,
+            norm="l2"
         )
-        self.model = joblib.load(
-            os.path.join(base_dir, "logistic_model.pkl")
-        )
-        self.labels = joblib.load(
-            os.path.join(base_dir, "labels.pkl")
-        )
 
-        # Image feature extractor (pretrained CNN, frozen)
-        self.image_service = ImageFeatureService()
+    def predict(self, symptoms: str, image_path=None):
+        X = self.vectorizer.transform([symptoms])
 
-    def predict(self, symptoms_text: str, image_path: str = None):
-        """
-        Perform inference using text features and optional image features.
+        prediction = self.model.predict(X)[0]
 
-        Args:
-            symptoms_text (str): User-provided symptom description
-            image_path (str, optional): Path to uploaded image
+        # Multi-class decision scores
+        decision_scores = self.model.decision_function(X)[0]
 
-        Returns:
-            dict: Prediction result with confidence and metadata
-        """
+        # Confidence = margin between top two classes
+        sorted_scores = np.sort(decision_scores)
+        confidence = float(sorted_scores[-1] - sorted_scores[-2])
 
-        # ---------------- TEXT FEATURES ----------------
-        text_features = self.vectorizer.transform(
-            [symptoms_text]
-        ).toarray()
+        confidence = max(0.0, min(confidence, 1.0))
+        confidence_pct = round(confidence * 100, 1)
 
-        # ---------------- IMAGE FEATURES (OPTIONAL) ----------------
-        if image_path:
-            image_features = self.image_service.extract_features(image_path)
-            image_features = image_features.reshape(1, -1)
-
-            # Combine text + image features
-            combined_features = np.hstack(
-                [text_features, image_features]
-            )
-        else:
-            combined_features = text_features
-
-        # ---------------- MODEL PREDICTION ----------------
-        probabilities = self.model.predict_proba(combined_features)[0]
-        max_index = probabilities.argmax()
-
-        prediction = self.labels[max_index]
-        confidence = float(probabilities[max_index])
+        is_confident = confidence >= 0.5  # tunable threshold
 
         return {
             "prediction": prediction,
-            "confidence": round(confidence, 3),
-            "is_confident": confidence >= 0.6,
-            "probabilities": {
-                label: round(float(prob), 3)
-                for label, prob in zip(self.labels, probabilities)
-            },
+            "confidence": confidence_pct,
+            "is_confident": is_confident,
             "used_image": bool(image_path)
         }

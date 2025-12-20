@@ -1,87 +1,80 @@
+from openai import OpenAI
 import os
-import requests
-from dotenv import load_dotenv
-
-# Ensure environment variables are loaded
-load_dotenv()
 
 
 class GeminiService:
     def __init__(self):
-        self.api_key = os.getenv("GEMINI_API_KEY")
-
-        # Current stable Gemini model
-        self.endpoint = (
-            "https://generativelanguage.googleapis.com/v1beta/models/"
-            "gemini-1.5-flash:generateContent"
-        )
-
-    def _call_gemini(self, prompt: str) -> str:
-        if not self.api_key:
-            raise RuntimeError("Gemini API key not configured")
-
-        headers = {
-            "Content-Type": "application/json"
-        }
-
-        payload = {
-            "contents": [
-                {
-                    "role": "user",
-                    "parts": [
-                        {"text": prompt}
-                    ]
-                }
-            ]
-        }
-
-        try:
-            response = requests.post(
-                f"{self.endpoint}?key={self.api_key}",
-                headers=headers,
-                json=payload,     # IMPORTANT: use json= not data=
-                timeout=15
-            )
-
-            response.raise_for_status()
-            data = response.json()
-
-            return data["candidates"][0]["content"]["parts"][0]["text"]
-
-        except Exception as e:
-            # TEMP debugging — safe because no secrets are printed
-            if "response" in locals():
-                print("DEBUG: Gemini response body:", response.text)
-            raise
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            print("⚠️ OpenAI API key missing — fallback mode enabled")
+            self.client = None
+        else:
+            self.client = OpenAI(api_key=api_key)
+            print("✅ OpenAI client initialized")
 
     def generate_followup_questions(self, symptoms: str) -> str:
-        prompt = f"""
-You are a women-focused health assistant.
+        if not self.client:
+            return self._fallback_followup(symptoms)
 
-The ML model is uncertain about the condition.
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a gentle health assistant. "
+                            "Ask 2–3 short follow-up questions. "
+                            "Do NOT diagnose. Do NOT give treatment advice."
+                        )
+                    },
+                    {"role": "user", "content": symptoms}
+                ],
+                temperature=0.4
+            )
+            return response.choices[0].message.content
 
-User symptoms:
-"{symptoms}"
-
-Ask 2–3 short, empathetic follow-up questions
-to better understand the symptoms.
-
-Rules:
-- Do NOT diagnose
-- Do NOT give medical advice
-- Be supportive and inclusive
-"""
-        return self._call_gemini(prompt)
+        except Exception as e:
+            print("🔥 LLM ERROR:", e)
+            return self._fallback_followup(symptoms)
 
     def generate_explanation(self, condition: str) -> str:
-        prompt = f"""
-Explain what "{condition}" generally refers to
-in simple, calm, non-alarming language.
+        if not self.client:
+            return self._fallback_explanation(condition)
 
-Rules:
-- Do NOT diagnose
-- Do NOT give medical advice
-- Encourage consulting a healthcare professional
-- Use an empathetic tone
-"""
-        return self._call_gemini(prompt)
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "Explain medical conditions simply and safely. "
+                            "Do NOT diagnose. Encourage professional consultation."
+                        )
+                    },
+                    {"role": "user", "content": condition}
+                ],
+                temperature=0.3
+            )
+            return response.choices[0].message.content
+
+        except Exception as e:
+            print("🔥 LLM ERROR:", e)
+            return self._fallback_explanation(condition)
+
+    # ---------------- FALLBACKS ----------------
+
+    def _fallback_followup(self, symptoms: str) -> str:
+        return (
+            "I need a little more information to understand this better:\n"
+            "• When did these symptoms begin?\n"
+            "• Are they constant or do they come and go?\n"
+            "• Have you noticed any recent changes or triggers?"
+        )
+
+    def _fallback_explanation(self, condition: str) -> str:
+        return (
+            f"'{condition}' is a term often used to describe a group of related symptoms. "
+            "Only a qualified healthcare professional can provide an accurate diagnosis."
+        )
