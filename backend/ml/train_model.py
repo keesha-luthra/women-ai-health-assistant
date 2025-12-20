@@ -1,32 +1,48 @@
+import os
 import pandas as pd
-import pickle
+import joblib
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
 
 
 DATA_PATH = "data/symptoms_dataset.csv"
-MODEL_PATH = "models/symptom_classifier.pkl"
 
 
 def train():
+    # ---- Load dataset ----
     df = pd.read_csv(DATA_PATH)
 
-    X = df["symptoms"]
-    y = df["condition"]
+    X = df["symptoms"].astype(str)
+    y = df["condition"].astype(str)
 
-    pipeline = Pipeline([
-        ("tfidf", TfidfVectorizer(stop_words="english")),
-        ("clf", LogisticRegression(max_iter=1000))
-    ])
+    # ---- Vectorizer ----
+    vectorizer = TfidfVectorizer(
+        stop_words="english",
+        ngram_range=(1, 2),
+        min_df=1
+    )
 
-    pipeline.fit(X, y)
+    X_vec = vectorizer.fit_transform(X)
 
-    with open(MODEL_PATH, "wb") as f:
-        pickle.dump(pipeline, f)
+    # ---- Classifier ----
+    model = LogisticRegression(
+        max_iter=1000,
+        solver="lbfgs",
+        multi_class="auto"
+    )
 
-    print("Model trained and saved successfully.")
+    model.fit(X_vec, y)
+
+    # ---- Save artifacts RELATIVE to this file ----
+    base_dir = os.path.dirname(__file__)
+
+    joblib.dump(vectorizer, os.path.join(base_dir, "tfidf_vectorizer.pkl"))
+    joblib.dump(model, os.path.join(base_dir, "logistic_model.pkl"))
+    joblib.dump(model.classes_, os.path.join(base_dir, "labels.pkl"))
+
+    print("✅ Training complete.")
+    print("📦 Artifacts saved to backend/ml/")
 
 
 if __name__ == "__main__":
