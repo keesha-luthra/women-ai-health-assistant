@@ -7,34 +7,50 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Mediva 🌿</h1>
+  <!-- 🌸 Soft overlay wrapper -->
+  <div class="page-wrapper">
+    <div class="container">
+      <h1>Mediva 🌿</h1>
 
-    <p class="subtitle">
-      A gentle, informational health assistant for women.
-    </p>
+      <p class="subtitle">
+        An AI-powered health assistant for general and women-specific health insights.
+      </p>
 
-    <textarea
-      id="symptomsInput"
-      placeholder="Describe your symptoms in your own words..."
-      rows="4"
-    ></textarea>
+      <!-- 🔁 MODE TOGGLE -->
+      <div class="mode-toggle">
+        <label>
+          <input type="radio" name="mode" value="general" checked />
+          General Health
+        </label>
 
-    <!-- ✅ IMAGE INPUT (OPTIONAL) -->
-    <input
-      type="file"
-      id="imageInput"
-      accept="image/*"
-      style="margin-top: 10px;"
-    />
+        <label>
+          <input type="radio" name="mode" value="women" />
+          Women-Specific
+        </label>
+      </div>
 
-    <p style="font-size: 12px; color: #777; margin-top: 5px;">
-      Image upload is optional and used only as a supporting signal.
-    </p>
+      <textarea
+        id="symptomsInput"
+        placeholder="Describe your symptoms in your own words..."
+        rows="4"
+      ></textarea>
 
-    <button onclick="submitSymptoms()">Get Insights</button>
+      <!-- OPTIONAL IMAGE -->
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        style="margin-top: 10px;"
+      />
 
-    <div id="result" class="result hidden"></div>
+      <p class="image-note">
+        Image upload is optional and used only as a supporting signal.
+      </p>
+
+      <button onclick="submitSymptoms()">Get Insights</button>
+
+      <div id="result" class="result hidden"></div>
+    </div>
   </div>
 
   <script src="/static/script.js"></script>

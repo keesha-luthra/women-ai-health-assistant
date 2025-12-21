@@ -1,0 +1,719 @@
+symptoms,condition,domain
+"I've noticed I'm getting a lot of hair on my chin and my periods are super irregular lately.",pcos,women
+"Dealing with stubborn acne as an adult and my cycles are all over the place.",pcos,women
+"My hair is thinning on top but I'm seeing more growth on my face and chest.",pcos,women
+"Haven't had a period in three months and I've been gaining weight around my middle for no reason.",pcos,women
+"Polycystic ovaries were mentioned at my last checkup and I have very oily skin.",pcos,women
+"Cycles are longer than 35 days and I'm struggling with facial hair growth.",pcos,women
+"Period is very infrequent and I'm noticing dark patches of skin around my neck.",pcos,women
+"It feels like I only get my period four or five times a year now.",pcos,women
+"Weight gain that won't budge and very heavy but rare menstrual cycles.",pcos,women
+"Excessive hair growth on my stomach and back along with skipped periods.",pcos,women
+"My skin is breaking out like a teenager and my periods have basically stopped.",pcos,women
+"Thinning hair on my scalp and I'm exhausted all the time with irregular cycles.",pcos,women
+"The hair growth on my upper lip is getting worse and my periods are unpredictable.",pcos,women
+"Been trying to conceive but my ovulation seems non-existent and my periods are random.",pcos,women
+"Very oily face and scalp with long gaps between my monthly cycles.",pcos,women
+"I've gained 15 pounds quickly and my periods are suddenly very light and rare.",pcos,women
+"Dealing with hirsutism and my cycles are getting longer and longer.",pcos,women
+"Missing periods for months at a time and noticing more body hair than usual.",pcos,women
+"Acne along my jawline that won't go away and irregular menstruation.",pcos,women
+"My cycle length varies every single month and I've noticed male-pattern hair thinning.",pcos,women
+"Periods are missing or very late and I have visible hair growth on my chin.",pcos,women
+"Difficulty losing weight and my menstrual cycle is extremely inconsistent.",pcos,women
+"Patchy skin and infrequent periods for the last six months.",pcos,women
+"My periods are nearly two months apart and I have breakouts on my back.",pcos,women
+"Hormonal acne and very long cycles are making me feel frustrated.",pcos,women
+"My period didn't come this month and the last one was two weeks late.",menstrual_irregularity,women
+"Cycles used to be 28 days but now they are ranging from 21 to 45 days.",menstrual_irregularity,women
+"I'm spotting between my periods and the timing is never the same.",menstrual_irregularity,women
+"My flow started twice this month and I'm confused about my cycle.",menstrual_irregularity,women
+"Having very short cycles lately where I bleed every three weeks.",menstrual_irregularity,women
+"My period lasted ten days this time but only two days last month.",menstrual_irregularity,women
+"I missed my period entirely but I'm definitely not pregnant.",menstrual_irregularity,women
+"The gap between my periods is getting shorter and shorter.",menstrual_irregularity,women
+"Random bleeding throughout the month that isn't a full period.",menstrual_irregularity,women
+"I can't track my cycle anymore because the dates change every time.",menstrual_irregularity,women
+"Very light spotting instead of a regular period this month.",menstrual_irregularity,women
+"My periods are becoming very infrequent and hard to predict.",menstrual_irregularity,women
+"Experienced a very heavy flow after missing my period for two months.",menstrual_irregularity,women
+"My menstrual start date fluctuates by more than a week every time.",menstrual_irregularity,women
+"I had a period two weeks ago and it seems to be starting again.",menstrual_irregularity,women
+"Chronic changes in my cycle length over the last half year.",menstrual_irregularity,women
+"Frequent breakthroughs bleeding even though I'm not on medication.",menstrual_irregularity,women
+"My period is 12 days late and this happens almost every other month.",menstrual_irregularity,women
+"Cycles are consistently lasting over 40 days now.",menstrual_irregularity,women
+"The duration of my bleeding varies significantly from month to month.",menstrual_irregularity,women
+"Short periods followed by very long cycles the next time.",menstrual_irregularity,women
+"My monthly cycle has become completely unpredictable lately.",menstrual_irregularity,women
+"Bleeding between cycles that is light but noticeable.",menstrual_irregularity,women
+"I missed two periods in a row and then had a very heavy one.",menstrual_irregularity,women
+"The timing of my period is never consistent anymore.",menstrual_irregularity,women
+"I'm experiencing night sweats and my moods are swinging wildly.",hormonal_imbalance,women
+"Feeling very irritable lately and noticing changes in my skin and hair.",hormonal_imbalance,women
+"Having trouble sleeping and feeling hot flashes during the day.",hormonal_imbalance,women
+"My energy levels are low and I'm gaining weight in some places.",hormonal_imbalance,women
+"Significant mood shifts right before my period that feel extreme.",hormonal_imbalance,women
+"I feel foggy headed and my skin has become very dry lately.",hormonal_imbalance,women
+"Sudden bouts of anxiety and heart palpitations that come and go.",hormonal_imbalance,women
+"Feeling a loss of libido and general fatigue regardless of sleep.",hormonal_imbalance,women
+"My hair is falling out more than usual and I feel very cold.",hormonal_imbalance,women
+"Unexplained weight changes and persistent adult acne.",hormonal_imbalance,women
+"Bouts of extreme fatigue followed by periods of restlessness.",hormonal_imbalance,women
+"I'm getting hot flashes and I'm only in my late 30s.",hormonal_imbalance,women
+"Memory feels fuzzy and I'm struggling to concentrate on tasks.",hormonal_imbalance,women
+"Feeling very bloated and my breasts are tender for weeks.",hormonal_imbalance,women
+"Mood swings that make me feel like a different person.",hormonal_imbalance,women
+"Persistent thirst and frequent urination along with fatigue.",hormonal_imbalance,women
+"Developing dark hair on my face and my voice feels slightly deeper.",hormonal_imbalance,women
+"Sweating excessively at night even when the room is cold.",hormonal_imbalance,women
+"My skin is thinning and I'm bruising more easily than before.",hormonal_imbalance,women
+"I feel constantly stressed and my appetite has changed significantly.",hormonal_imbalance,women
+"Headaches that seem to follow my hormonal cycle.",hormonal_imbalance,women
+"Feeling overwhelmed easily and my periods are getting much lighter.",hormonal_imbalance,women
+"Changes in my body composition despite no change in diet.",hormonal_imbalance,women
+"Heart feels like it's racing at random times during the day.",hormonal_imbalance,women
+"Sleep is disrupted and I feel physically drained every morning.",hormonal_imbalance,women
+"I feel so weak and tired even after sleeping for eight hours.",iron_deficiency_anemia,women
+"My skin looks very pale and I'm getting out of breath walking upstairs.",iron_deficiency_anemia,women
+"I've been craving ice and I feel dizzy when I stand up quickly.",iron_deficiency_anemia,women
+"My fingernails are brittle and seem to be curving inwards like spoons.",iron_deficiency_anemia,women
+"Heart is pounding fast and I feel short of breath after light exercise.",iron_deficiency_anemia,women
+"I've noticed my tongue is sore and my mouth feels dry.",iron_deficiency_anemia,women
+"My hands and feet are always freezing even when it's warm.",iron_deficiency_anemia,women
+"Feeling very lightheaded and seeing spots when I move too fast.",iron_deficiency_anemia,women
+"Extreme exhaustion that makes it hard to get through the work day.",iron_deficiency_anemia,women
+"I'm unusually pale and my friends have commented on it.",iron_deficiency_anemia,women
+"Strange cravings for things like dirt or paper lately.",iron_deficiency_anemia,women
+"My legs feel restless at night and I have a constant headache.",iron_deficiency_anemia,women
+"Feeling faint and having trouble concentrating on anything.",iron_deficiency_anemia,women
+"My hair is dry and falling out and my skin lacks any color.",iron_deficiency_anemia,women
+"Getting winded just from doing basic chores around the house.",iron_deficiency_anemia,women
+"I feel a strange buzzing or ringing in my ears lately.",iron_deficiency_anemia,women
+"Brittle nails that break as soon as they grow a little bit.",iron_deficiency_anemia,women
+"My chest feels tight and I'm panting after walking a short distance.",iron_deficiency_anemia,women
+"Chronic fatigue that doesn't improve with rest or caffeine.",iron_deficiency_anemia,women
+"Dizziness and a general feeling of being washed out.",iron_deficiency_anemia,women
+"Noticing that the inside of my lower eyelids looks very white.",iron_deficiency_anemia,women
+"I feel irritable and lack the energy to do my hobbies.",iron_deficiency_anemia,women
+"Shortness of breath is becoming a daily occurrence for me.",iron_deficiency_anemia,women
+"My pulse feels very rapid even when I am sitting still.",iron_deficiency_anemia,women
+"Struggling with a very sore, smooth-looking tongue.",iron_deficiency_anemia,women
+"I've gained weight and I'm feeling incredibly sluggish and cold.",thyroid_disorder,women
+"My heart is racing and I've lost weight without even trying.",thyroid_disorder,women
+"Feeling very jittery and my hands have a slight tremor.",thyroid_disorder,women
+"My neck feels swollen and I'm having trouble swallowing.",thyroid_disorder,women
+"I'm losing hair and my skin feels very rough and dry.",thyroid_disorder,women
+"Everything feels like it's moving in slow motion and I'm depressed.",thyroid_disorder,women
+"I'm sweating a lot and I can't stand the heat anymore.",thyroid_disorder,women
+"My periods have become very heavy and I'm exhausted.",thyroid_disorder,women
+"Feeling anxious and my eyes seem a bit more prominent than usual.",thyroid_disorder,women
+"Constipation that won't go away and I'm feeling very bloated.",thyroid_disorder,women
+"Muscle weakness in my thighs and arms makes it hard to lift things.",thyroid_disorder,women
+"My voice has become hoarse and my face looks puffy.",thyroid_disorder,women
+"I feel like I have too much energy and I can't sleep at night.",thyroid_disorder,women
+"My pulse is very slow and I feel mentally foggy.",thyroid_disorder,women
+"Changes in my menstrual cycle and persistent fatigue.",thyroid_disorder,women
+"I'm feeling very sensitive to cold temperatures lately.",thyroid_disorder,women
+"My skin is thinning and I'm getting frequent bowel movements.",thyroid_disorder,women
+"Feeling a lump in the front of my throat when I swallow.",thyroid_disorder,women
+"Joint pain and muscle aches that I can't explain.",thyroid_disorder,women
+"My nails are crumbly and my hair is very brittle.",thyroid_disorder,women
+"I'm feeling very restless and my mood is all over the place.",thyroid_disorder,women
+"Extreme tiredness and a general lack of motivation.",thyroid_disorder,women
+"My skin feels itchy and I have a rapid heartbeat.",thyroid_disorder,women
+"Weight fluctuations and feeling like my throat is tight.",thyroid_disorder,women
+"Mental confusion and feeling cold all the time.",thyroid_disorder,women
+"I get so bloated and irritable a week before my period starts.",pms,women
+"My breasts are incredibly tender and I'm craving chocolate.",pms,women
+"Feeling very tearful and emotional for no reason lately.",pms,women
+"I'm having breakouts and bad cramps right before my flow.",pms,women
+"Major mood swings and I'm snapping at everyone around me.",pms,women
+"Feeling exhausted and having trouble sleeping before my cycle.",pms,women
+"My stomach is so upset and I feel very gassy this week.",pms,women
+"I have a dull headache and I'm feeling very clumsy today.",pms,women
+"Social withdrawal and feeling very anxious as my period nears.",pms,women
+"My appetite is through the roof and I'm feeling very heavy.",pms,women
+"Lower back pain and general aches in my legs before my period.",pms,women
+"I'm retaining so much water that my clothes feel tight.",pms,women
+"Crying easily over small things and feeling very sensitive.",pms,women
+"The brain fog and fatigue are hitting me hard this week.",pms,women
+"Breakouts on my chin and chest right before my period arrives.",pms,women
+"I feel a lot of pressure in my pelvis and I'm very moody.",pms,women
+"Difficulty concentrating and feeling very overwhelmed today.",pms,women
+"Extreme sugar cravings and feeling bloated in my midsection.",pms,women
+"My sleep is restless and I'm having vivid dreams this week.",pms,women
+"Feeling angry and frustrated without a clear cause.",pms,women
+"My breasts feel heavy and sore and I'm very tired.",pms,women
+"Dull ache in my abdomen and I'm feeling very lethargic.",pms,women
+"Sudden onset of sadness and fatigue before my monthly cycle.",pms,women
+"My skin looks dull and I'm getting pre-period breakouts.",pms,women
+"Feeling tense and on edge as my period approaches.",pms,women
+"My periods are extremely painful and the cramps are unbearable.",endometriosis,women
+"I have chronic pelvic pain that gets worse during my cycle.",endometriosis,women
+"Painful bowel movements and lower back pain during my period.",endometriosis,women
+"It hurts when I have intercourse and I have heavy bleeding.",endometriosis,women
+"I'm struggling with infertility and have very painful periods.",endometriosis,women
+"The pain in my pelvis lasts all month not just during my period.",endometriosis,women
+"I have blood in my stool and severe cramping every month.",endometriosis,women
+"Feeling very bloated and having sharp pains in my lower abdomen.",endometriosis,women
+"My periods are so heavy I have to change my pad every hour.",endometriosis,women
+"Painful urination and pelvic pressure during my menstrual cycle.",endometriosis,women
+"The cramping is so bad I often have to miss work or school.",endometriosis,women
+"I feel a dragging sensation in my pelvis and deep internal pain.",endometriosis,women
+"Nausea and diarrhea that always coincide with my period.",endometriosis,women
+"Severe backache and leg pain that radiates during my flow.",endometriosis,women
+"I've been diagnosed with cysts and have very intense period pain.",endometriosis,women
+"Bleeding between periods and constant pelvic discomfort.",endometriosis,women
+"I feel exhausted from the chronic pain I have every month.",endometriosis,women
+"Heavy periods with large clots and significant abdominal pain.",endometriosis,women
+"The pain doesn't respond well to over-the-counter medication.",endometriosis,women
+"Experiencing sharp, stabbing pains in my pelvic region.",endometriosis,women
+"Pain during exercise and general pelvic heaviness.",endometriosis,women
+"My cycles are getting more painful as I get older.",endometriosis,women
+"I have constant discomfort in my lower belly and back.",endometriosis,women
+"Severe menstrual cramps that radiate down my thighs.",endometriosis,women
+"Painful ovulation followed by even more painful periods.",endometriosis,women
+"I have a dull ache on the left side of my lower abdomen.",ovarian_cysts,women
+"Feeling a sense of fullness or heaviness in my pelvic area.",ovarian_cysts,women
+"I have sharp, sudden pain in my lower stomach that comes and goes.",ovarian_cysts,women
+"Bloating and swelling in my lower abdomen that won't subside.",ovarian_cysts,women
+"Pain during intercourse and a frequent urge to urinate.",ovarian_cysts,women
+"My periods have become irregular and I have pelvic pressure.",ovarian_cysts,women
+"I feel a sharp twinge in my side when I move a certain way.",ovarian_cysts,women
+"Lower back pain and aching in my thighs lately.",ovarian_cysts,women
+"Nausea and breast tenderness similar to pregnancy symptoms.",ovarian_cysts,women
+"A feeling of pressure on my bladder making me go often.",ovarian_cysts,women
+"Sudden pelvic pain after physical activity or exercise.",ovarian_cysts,women
+"I can feel a firm mass in my lower abdominal region.",ovarian_cysts,women
+"Dull pelvic pain that radiates to my lower back.",ovarian_cysts,women
+"Difficulty emptying my bladder completely and pelvic discomfort.",ovarian_cysts,women
+"My stomach looks distended and I feel very full after eating little.",ovarian_cysts,women
+"I'm having spotting and sharp pains on one side of my pelvis.",ovarian_cysts,women
+"Vague abdominal discomfort that has been lingering for weeks.",ovarian_cysts,women
+"Pain that feels like a heavy weight sitting in my pelvis.",ovarian_cysts,women
+"I'm experiencing irregular bleeding and localized pelvic pain.",ovarian_cysts,women
+"Sharp stabs of pain in the groin area occasionally.",ovarian_cysts,women
+"Feeling bloated and having a constant dull ache in my belly.",ovarian_cysts,women
+"Pelvic discomfort that gets worse right before my period.",ovarian_cysts,women
+"Pressure in my rectum and lower abdominal cramping.",ovarian_cysts,women
+"I feel a pulling sensation in my lower abdomen.",ovarian_cysts,women
+"Persistent ache in the pelvic floor and lower back.",ovarian_cysts,women
+"I have a tight, band-like feeling around my forehead and temples.",tension_headache,general
+"My neck and shoulders are stiff and I have a dull head ache.",tension_headache,general
+"It feels like my head is being squeezed by a very tight hat.",tension_headache,general
+"Persistent dull pain at the back of my head and neck.",tension_headache,general
+"I've had a mild headache all day that feels like constant pressure.",tension_headache,general
+"My scalp feels tender and my forehead is aching.",tension_headache,general
+"Feeling a steady ache on both sides of my head.",tension_headache,general
+"The muscles in my neck are very tight and my head hurts.",tension_headache,general
+"I have a nagging headache that started this morning at work.",tension_headache,general
+"Pressure behind my eyes and a dull ache across my brow.",tension_headache,general
+"My head feels heavy and the muscles in my jaw are tight.",tension_headache,general
+"A non-throbbing ache that covers my entire head.",tension_headache,general
+"I've been stressed and now I have a constant dull headache.",tension_headache,general
+"The pain is mild to moderate but it's been there for hours.",tension_headache,general
+"I feel like there is a weight pressing down on top of my head.",tension_headache,general
+"Stiffness in my upper back accompanied by a headache.",tension_headache,general
+"A lingering ache that feels like muscle tension in my head.",tension_headache,general
+"Both sides of my head are throbbing slightly but it's mostly pressure.",tension_headache,general
+"My temples feel sore and I have a constant dull pain.",tension_headache,general
+"I've had this tight feeling in my head for the last three days.",tension_headache,general
+"The headache gets worse towards the end of the day.",tension_headache,general
+"Feeling a constriction around my skull and neck muscles.",tension_headache,general
+"A steady, dull pain that doesn't pulse or throb.",tension_headache,general
+"I have a lot of tension in my neck and a headache across my forehead.",tension_headache,general
+"My head feels squeezed and I can't seem to relax my shoulders.",tension_headache,general
+"I'm seeing flashing lights and have a severe throbbing on one side.",migraine,general
+"I feel nauseous and the light is really bothering my eyes.",migraine,general
+"Extremely sensitive to loud noises and have a pounding headache.",migraine,general
+"I saw zig-zag lines before this intense headache started.",migraine,general
+"One side of my head is pulsing so hard I feel sick.",migraine,general
+"I need to lie down in a dark, quiet room right now.",migraine,general
+"My vision got blurry and then a sharp headache kicked in.",migraine,general
+"Feeling dizzy and having a very strong, rhythmic head pain.",migraine,general
+"I'm vomiting and my head feels like it's going to explode.",migraine,general
+"A throbbing pain that gets much worse if I try to move.",migraine,general
+"I have an aura of shimmering lights and a bad headache.",migraine,general
+"The pain is concentrated behind my left eye and it's pulsing.",migraine,general
+"Certain smells are making my headache and nausea worse.",migraine,general
+"I feel a tingling sensation in my arm and my head hurts.",migraine,general
+"This headache has lasted for two days and it's very intense.",migraine,general
+"I'm experiencing watery eyes and a very strong unilateral headache.",migraine,general
+"Light and sound are unbearable during these episodes.",migraine,general
+"My head is throbbing and I feel very lightheaded.",migraine,general
+"I get these severe headaches that make me feel physically ill.",migraine,general
+"The pulsating pain is so bad I can't concentrate on anything.",migraine,general
+"I saw a blind spot in my vision before the pain began.",migraine,general
+"My head hurts so much that I feel like I'm going to throw up.",migraine,general
+"Intense throbbing that is localized to one temple.",migraine,general
+"The headache started suddenly and is accompanied by sensitivity to touch.",migraine,general
+"I feel weak and have a pounding sensation in my skull.",migraine,general
+"I have a high temperature and my whole body is aching.",viral_fever,general
+"Feeling very chilly and shivering followed by sweating.",viral_fever,general
+"I have a sore throat, a cough, and a fever.",viral_fever,general
+"My joints hurt and I have a temperature of 101 degrees.",viral_fever,general
+"Feeling very weak and I've lost my appetite today.",viral_fever,general
+"I have a runny nose and I'm feeling very hot and feverish.",viral_fever,general
+"My head is throbbing and I have a persistent dry cough.",viral_fever,general
+"I've been feeling under the weather with a low-grade fever.",viral_fever,general
+"My muscles feel sore like I've run a marathon but I have a fever.",viral_fever,general
+"I have a burning sensation in my eyes and a high fever.",viral_fever,general
+"Feeling very lethargic and my skin feels hot to the touch.",viral_fever,general
+"I'm experiencing bouts of sweating and then feeling very cold.",viral_fever,general
+"A bad headache combined with a rising body temperature.",viral_fever,general
+"I have a scratchy throat and I'm feeling very fatigued.",viral_fever,general
+"My stomach is a bit upset and I've developed a fever.",viral_fever,general
+"I've been sneezing and my temperature is higher than normal.",viral_fever,general
+"Feeling dizzy and weak with a persistent fever.",viral_fever,general
+"My throat is red and I have a fever that comes and goes.",viral_fever,general
+"I'm coughing up phlegm and I have a moderate fever.",viral_fever,general
+"General body malaise and a temperature of 102.",viral_fever,general
+"My eyes are watery and I feel very feverish today.",viral_fever,general
+"I have a mild fever and I feel very tired all over.",viral_fever,general
+"My back and legs are aching and I have a temperature.",viral_fever,general
+"Feeling congested and hot with a nagging headache.",viral_fever,general
+"I have a fever and I'm feeling very dehydrated.",viral_fever,general
+"I have a red, itchy rash on my arm after using a new lotion.",allergic_dermatitis,general
+"My skin is breaking out in hives where I touched that plant.",allergic_dermatitis,general
+"I have small blisters and redness on my hands.",allergic_dermatitis,general
+"The skin around my eyes is swollen and very itchy.",allergic_dermatitis,general
+"I developed a rash after wearing a new nickel necklace.",allergic_dermatitis,general
+"My skin feels like it's burning and it's very red.",allergic_dermatitis,general
+"I have a bumpy, red rash that is spreading on my legs.",allergic_dermatitis,general
+"My hands are dry, cracked, and very inflamed after cleaning.",allergic_dermatitis,general
+"I'm getting itchy patches wherever my clothes rub my skin.",allergic_dermatitis,general
+"My face is red and irritated after using a different face wash.",allergic_dermatitis,general
+"I have a localized rash that looks like it's blistering.",allergic_dermatitis,general
+"The skin on my wrists is very itchy and looks raw.",allergic_dermatitis,general
+"I have a red patch of skin that feels hot and tender.",allergic_dermatitis,general
+"Small, fluid-filled bumps have appeared on my fingers.",allergic_dermatitis,general
+"My skin is peeling and very red in one specific spot.",allergic_dermatitis,general
+"I have an itchy reaction on my skin from a new detergent.",allergic_dermatitis,general
+"The area where I applied the cream is now bright red and itchy.",allergic_dermatitis,general
+"I'm noticing a lot of redness and scaling on my neck.",allergic_dermatitis,general
+"My skin is reacting to something with hives and itching.",allergic_dermatitis,general
+"I have a persistent rash that appeared after using a new soap.",allergic_dermatitis,general
+"The skin on my feet is red and itchy after wearing new shoes.",allergic_dermatitis,general
+"I have a stinging sensation and a red rash on my forearms.",allergic_dermatitis,general
+"My skin is very sensitive and breaks out in red patches easily.",allergic_dermatitis,general
+"I have a bumpy, itchy rash that won't go away.",allergic_dermatitis,general
+"Redness and swelling on my hands after handling chemicals.",allergic_dermatitis,general
+"I have very dry, itchy patches of skin in the creases of my elbows.",eczema,general
+"The skin behind my knees is red, scaly, and very irritated.",eczema,general
+"I have chronic dry skin that often cracks and bleeds.",eczema,general
+"My child has a red rash on their cheeks that looks very dry.",eczema,general
+"I'm getting thick, leathery patches of skin on my ankles.",eczema,general
+"The itching is so intense it keeps me up at night.",eczema,general
+"I have small bumps that leak fluid when I scratch them.",eczema,general
+"My skin is very sensitive and flares up during the winter.",eczema,general
+"I have red, inflamed skin on my hands that is very painful.",eczema,general
+"The rash on my neck is scaly and very itchy.",eczema,general
+"I've had this recurring dry skin issue since I was a kid.",eczema,general
+"My skin looks raw and sensitive after a flare-up.",eczema,general
+"I have patches of skin that are darker than the rest and very dry.",eczema,general
+"The skin on my eyelids is red and flaky.",eczema,general
+"I'm experiencing a lot of skin irritation and dryness on my chest.",eczema,general
+"My skin feels very tight and itchy after I take a shower.",eczema,general
+"I have rough, sandpaper-like patches on my arms.",eczema,general
+"The itching is constant and my skin is very red and warm.",eczema,general
+"I have cracks in my skin that are very slow to heal.",eczema,general
+"My skin is peeling in large flakes and it's very itchy.",eczema,general
+"I have a persistent rash that gets worse with stress.",eczema,general
+"The skin on my palms is very dry and has deep lines.",eczema,general
+"I have red, itchy spots that seem to be spreading.",eczema,general
+"My skin is very reactive to certain fabrics and gets itchy.",eczema,general
+"I have a history of asthma and now I have this itchy rash.",eczema,general
+"I have an itchy, red ring-shaped rash on my arm.",fungal_skin_infection,general
+"The skin between my toes is peeling and very itchy.",fungal_skin_infection,general
+"I have white, flaky patches on my chest and back.",fungal_skin_infection,general
+"My groin area is very red, itchy, and irritated.",fungal_skin_infection,general
+"I noticed a circular rash with a clear center on my leg.",fungal_skin_infection,general
+"The skin under my breasts is red and feels damp and itchy.",fungal_skin_infection,general
+"I have thickened, yellow nails that are starting to crumble.",fungal_skin_infection,general
+"My scalp is very itchy and I have patches of hair loss.",fungal_skin_infection,general
+"I have a red, scaly rash in the folds of my skin.",fungal_skin_infection,general
+"The rash on my feet is burning and the skin is cracking.",fungal_skin_infection,general
+"I have small, pale spots on my skin that don't tan.",fungal_skin_infection,general
+"My skin is macerated and white between my fingers.",fungal_skin_infection,general
+"I have a very itchy rash that is shaped like a circle.",fungal_skin_infection,general
+"The skin in my armpits is red and has a strange odor.",fungal_skin_infection,general
+"I have a fungal infection on my skin that is spreading fast.",fungal_skin_infection,general
+"My skin feels very itchy and there are raised red edges on the rash.",fungal_skin_infection,general
+"I have a persistent itch in my private areas that is very red.",fungal_skin_infection,general
+"The soles of my feet are very dry and scaling in a pattern.",fungal_skin_infection,general
+"I have a rash that looks like small red bumps in a cluster.",fungal_skin_infection,general
+"My skin is irritated and has a silvery scale on top.",fungal_skin_infection,general
+"I've been using an antifungal cream but the rash is still there.",fungal_skin_infection,general
+"The circular rash is getting bigger and more itchy.",fungal_skin_infection,general
+"I have a burning sensation and redness in my skin folds.",fungal_skin_infection,general
+"My nails are discolored and lifting away from the bed.",fungal_skin_infection,general
+"I have a red, itchy patch on my neck that feels rough.",fungal_skin_infection,general
+"My bones ache and I feel very tired all the time.",vitamin_d_deficiency,general
+"I've been feeling down and my muscles feel very weak.",vitamin_d_deficiency,general
+"I'm getting sick very often and I have lower back pain.",vitamin_d_deficiency,general
+"My hair is thinning and I feel a general lack of energy.",vitamin_d_deficiency,general
+"I have persistent muscle pain and my joints feel stiff.",vitamin_d_deficiency,general
+"I'm experiencing a lot of fatigue despite getting enough sleep.",vitamin_d_deficiency,general
+"My wounds seem to be taking a long time to heal lately.",vitamin_d_deficiency,general
+"I feel very sluggish and my mood is consistently low.",vitamin_d_deficiency,general
+"I have a dull ache in my ribs and hips.",vitamin_d_deficiency,general
+"My legs feel heavy and I have trouble climbing stairs.",vitamin_d_deficiency,general
+"I'm noticing more hair in my brush and I feel exhausted.",vitamin_d_deficiency,general
+"I have frequent backaches that don't have a clear cause.",vitamin_d_deficiency,general
+"Feeling very blue and my body feels physically drained.",vitamin_d_deficiency,general
+"I'm getting more colds and infections than I used to.",vitamin_d_deficiency,general
+"My bones feel fragile and I have a lot of muscle twitches.",vitamin_d_deficiency,general
+"I feel a lack of strength in my hands and arms.",vitamin_d_deficiency,general
+"General body aches and a feeling of being worn out.",vitamin_d_deficiency,general
+"I'm struggling with low mood and constant tiredness.",vitamin_d_deficiency,general
+"My joints are sore and I have a lot of muscle stiffness.",vitamin_d_deficiency,general
+"I feel very weak and I'm having trouble concentrating.",vitamin_d_deficiency,general
+"I have a lot of fatigue and my hair is falling out.",vitamin_d_deficiency,general
+"My immunity feels low and I have persistent back pain.",vitamin_d_deficiency,general
+"I have a sharp burning in my throat after I eat anything heavy.",acid_reflux,general
+"I'm tasting bile in my mouth and my chest feels very tight.",acid_reflux,general
+"I have a persistent dry cough that gets worse when I lie down.",acid_reflux,general
+"My stomach acid feels like it's rising into my esophagus.",acid_reflux,general
+"I'm experiencing painful heartburn right behind my breastbone.",acid_reflux,general
+"I have a sour taste in my mouth and I'm burping constantly.",acid_reflux,general
+"I feel like there is food stuck in my throat after I eat.",acid_reflux,general
+"My voice is very hoarse and I have a constant sore throat.",acid_reflux,general
+"I'm feeling nauseated and have a burning sensation in my upper belly.",acid_reflux,general
+"I have chest pain that makes me think I'm having a heart problem.",acid_reflux,general
+"I'm waking up at night choking on stomach acid.",acid_reflux,general
+"I have a lot of indigestion and my chest feels very warm.",acid_reflux,general
+"I'm burping up small amounts of food and acid regularly.",acid_reflux,general
+"My throat feels irritated and I have a lot of gas in my stomach.",acid_reflux,general
+"I have a burning feeling in my chest after drinking coffee.",acid_reflux,general
+"My mouth is very dry and I'm feeling incredibly lightheaded.",dehydration,general
+"I'm thirsty all the time and my urine is a dark amber color.",dehydration,general
+"I have a pounding headache and I feel very weak and dizzy.",dehydration,general
+"My skin doesn't go back down when I pinch it on my hand.",dehydration,general
+"I'm not urinating as much as usual and I feel very sluggish.",dehydration,general
+"I have a fast heart rate and my tongue feels very dry and sticky.",dehydration,general
+"I'm feeling very confused and I have a dry, scratchy throat.",dehydration,general
+"My eyes feel very dry and sunken and I have no energy.",dehydration,general
+"I'm experiencing muscle cramps in my legs and extreme thirst.",dehydration,general
+"I feel very hot but I'm not sweating even though I'm active.",dehydration,general
+"My blood pressure is low and I feel faint when I stand up.",dehydration,general
+"I have a persistent thirst that no amount of water seems to fix.",dehydration,general
+"I'm feeling very irritable and have a dull, throbbing headache.",dehydration,general
+"My urine output has dropped to almost nothing today.",dehydration,general
+"I feel very drained and my mouth feels like it's full of cotton.",dehydration,general
+"I'm so tired I can't even hold a conversation properly.",sleep_deprivation,general
+"My head is fuzzy and I'm making a lot of mistakes at work.",sleep_deprivation,general
+"I've been awake for over 24 hours and I feel very shaky.",sleep_deprivation,general
+"My eyes are stinging and I have dark circles that won't go away.",sleep_deprivation,general
+"I'm feeling very grumpy and everything is annoying me today.",sleep_deprivation,general
+"I keep nodding off for a few seconds without realizing it.",sleep_deprivation,general
+"My memory is shot and I can't remember what I did an hour ago.",sleep_deprivation,general
+"I have a constant dull headache from not sleeping enough.",sleep_deprivation,general
+"I'm feeling very uncoordinated and I keep tripping over things.",sleep_deprivation,general
+"My brain feels like it's in a fog and I'm yawning constantly.",sleep_deprivation,general
+"I'm craving junk food and I feel physically exhausted.",sleep_deprivation,general
+"I've had very poor sleep for a week and I feel very low.",sleep_deprivation,general
+"I'm struggling to stay awake while driving or sitting still.",sleep_deprivation,general
+"My reaction time is very slow and I feel mentally drained.",sleep_deprivation,general
+"I'm feeling very overwhelmed and my body feels very heavy.",sleep_deprivation,general
+"My heart is thumping and I feel a tight knot in my chest.",anxiety,general
+"I'm constantly worrying about things that might go wrong.",anxiety,general
+"I feel very restless, like I need to keep moving all the time.",anxiety,general
+"My hands are trembling and I'm sweating for no reason.",anxiety,general
+"I have a persistent sense of impending doom and panic.",anxiety,general
+"I'm breathing very shallowly and I feel like I can't get enough air.",anxiety,general
+"My mind is racing with 'what if' scenarios all day long.",anxiety,general
+"I feel very jumpy and my muscles are constantly tensed up.",anxiety,general
+"I'm having trouble focusing because I'm so preoccupied with worry.",anxiety,general
+"I have an upset stomach and a feeling of dread in my gut.",anxiety,general
+"I'm feeling very on edge and I'm snapping at people.",anxiety,general
+"I've been having panic attacks where my heart races and I sweat.",anxiety,general
+"I'm avoiding certain places because they make me feel nervous.",anxiety,general
+"I have cold, clammy hands and I'm feeling very uneasy.",anxiety,general
+"I'm struggling to sleep because I'm worrying about the next day.",anxiety,general
+"Noticing dark, velvety patches of skin in my armpits and my periods are non-existent.",pcos,women
+"I've been dealing with cystic acne along my jaw and my hair is thinning at the temples.",pcos,women
+"My cycle is over 50 days long and I'm seeing significant hair growth on my chin.",pcos,women
+"Weight is piling on around my abdomen despite no change in my diet or exercise.",pcos,women
+"I only get a period once every few months and they are very heavy when they happen.",pcos,women
+"Dealing with male-pattern baldness and constant breakouts on my back and chest.",pcos,women
+"My ultrasound showed many small follicles on my ovaries and my cycles are erratic.",pcos,women
+"I feel like my hormones are crashed; no periods for months and extra facial hair.",pcos,women
+"Skin tags are appearing on my neck and my menstrual cycle has completely stalled.",pcos,women
+"Periods are incredibly infrequent and I'm struggling with adult onset acne.",pcos,women
+"I'm seeing dark hair growing on my breasts and my cycles are very far apart.",pcos,women
+"My period hasn't come in 90 days and I've noticed my hair is getting very thin.",pcos,women
+"Oily skin and hair that needs washing every day along with missed periods.",pcos,women
+"Cycles are extremely long and I have noticed hair growth on my inner thighs.",pcos,women
+"Feeling frustrated with weight gain and the sudden appearance of chin hairs.",pcos,women
+"My period start dates are a total mystery every month lately.",menstrual_irregularity,women
+"I'm bleeding for only one day then it stops and starts again a week later.",menstrual_irregularity,women
+"Cycles used to be like clockwork but now they are varying by 15 days.",menstrual_irregularity,women
+"Experiencing breakthrough bleeding while I'm supposed to be mid-cycle.",menstrual_irregularity,women
+"My periods are occurring every 20 days which feels way too frequent.",menstrual_irregularity,women
+"The time between my cycles has stretched out to nearly two months now.",menstrual_irregularity,women
+"I had a very light period followed by a massive one just two weeks later.",menstrual_irregularity,women
+"Tracking my apps is useless because my period is never on time anymore.",menstrual_irregularity,women
+"Dealing with spotting for several days before my actual flow begins.",menstrual_irregularity,women
+"My menstruation has become completely erratic over the last four months.",menstrual_irregularity,women
+"The duration of my period changes every time; sometimes it's two days, sometimes ten.",menstrual_irregularity,women
+"Frequent cycles that occur twice in a single calendar month.",menstrual_irregularity,women
+"I'm missing every other period and the ones I do have are very light.",menstrual_irregularity,women
+"Sudden changes in my menstrual flow and timing for no apparent reason.",menstrual_irregularity,women
+"My cycle length has shifted from 28 days to 45 days over the last year.",menstrual_irregularity,women
+"I'm having night sweats so bad I have to change my sheets, plus I'm moody.",hormonal_imbalance,women
+"My skin is suddenly paper-dry and I'm feeling very anxious for no reason.",hormonal_imbalance,women
+"Feeling a total lack of drive and my energy is at an all-time low.",hormonal_imbalance,women
+"I'm getting hot flashes throughout the day that make my face turn bright red.",hormonal_imbalance,women
+"My weight is fluctuating wildly and I feel bloated all the time.",hormonal_imbalance,women
+"Brain fog is making it impossible to work and I feel very irritable.",hormonal_imbalance,women
+"I'm losing hair in clumps and my periods have become very light.",hormonal_imbalance,women
+"Sleep is impossible because I wake up feeling overheated and restless.",hormonal_imbalance,women
+"My breasts feel very lumpy and painful for most of the month now.",hormonal_imbalance,women
+"I'm experiencing heart palpitations and sudden mood crashes.",hormonal_imbalance,women
+"Feeling like my internal thermostat is broken; I'm either freezing or boiling.",hormonal_imbalance,women
+"My body feels puffy and I'm snapping at my family over nothing.",hormonal_imbalance,women
+"Unexplained fatigue that doesn't go away even with ten hours of sleep.",hormonal_imbalance,women
+"My skin is thinning and I've noticed new facial hair appearing.",hormonal_imbalance,women
+"I feel very disconnected and my memory has been terrible lately.",hormonal_imbalance,women
+"I'm craving ice constantly and I feel winded just talking on the phone.",iron_deficiency_anemia,women
+"My lower eyelids are very pale and my nails are breaking constantly.",iron_deficiency_anemia,women
+"I feel like I'm going to faint every time I stand up from the sofa.",iron_deficiency_anemia,women
+"My tongue looks swollen and pale and I have no appetite at all.",iron_deficiency_anemia,women
+"I'm experiencing restless legs at night that keep me from sleeping.",iron_deficiency_anemia,women
+"My heartbeat feels irregular and I'm out of breath after walking the dog.",iron_deficiency_anemia,women
+"Feeling very cold in my extremities even when I'm wearing wool socks.",iron_deficiency_anemia,women
+"My skin has a yellowish-pale tint and I feel incredibly weak.",iron_deficiency_anemia,women
+"Brittle, spoon-shaped nails and I'm losing more hair than usual.",iron_deficiency_anemia,women
+"I've been feeling very dizzy and my ears are ringing constantly.",iron_deficiency_anemia,women
+"Shortness of breath is making it hard for me to exercise lately.",iron_deficiency_anemia,women
+"I feel physically exhausted and my concentration is completely gone.",iron_deficiency_anemia,women
+"My pulse is racing and I feel lightheaded most of the afternoon.",iron_deficiency_anemia,women
+"I'm unusually tired and my friends say I look like a ghost.",iron_deficiency_anemia,women
+"Feeling a strange desire to chew on non-food items like paper or dirt.",iron_deficiency_anemia,women
+"My neck looks enlarged and I'm suddenly gaining weight very fast.",thyroid_disorder,women
+"I'm feeling very shaky and my heart is beating out of my chest.",thyroid_disorder,women
+"My skin is incredibly itchy and dry and my hair is falling out.",thyroid_disorder,women
+"I feel constantly overheated and I've lost ten pounds in two weeks.",thyroid_disorder,women
+"My voice sounds very raspy and I have a constant feeling of a lump in my throat.",thyroid_disorder,women
+"I'm feeling very depressed and sluggish and my periods are very heavy.",thyroid_disorder,women
+"My eyes feel gritty and look more prominent than they used to.",thyroid_disorder,women
+"I'm having bowel movements several times a day and I feel very anxious.",thyroid_disorder,women
+"My muscles feel weak, especially in my upper arms and shoulders.",thyroid_disorder,women
+"I'm feeling very cold all the time and my face looks puffy in the morning.",thyroid_disorder,women
+"My heart rate is very slow and I'm struggling with severe constipation.",thyroid_disorder,women
+"I feel jittery like I've had way too much coffee even when I haven't.",thyroid_disorder,women
+"My fingernails are soft and peeling and I'm feeling very tired.",thyroid_disorder,women
+"I'm having trouble swallowing food and my neck feels very tight.",thyroid_disorder,women
+"My period has suddenly stopped and I'm feeling very restless and hot.",thyroid_disorder,women
+"I'm so bloated I can't button my pants and I'm crying over everything.",pms,women
+"My skin is breaking out in painful bumps and I'm craving salty snacks.",pms,women
+"I feel very clumsy, like I'm dropping things more often this week.",pms,women
+"My lower back is throbbing and I have a dull ache in my pelvic area.",pms,women
+"I feel so angry I could scream and my breasts are very sensitive.",pms,women
+"Total lack of energy and I'm sleeping way more than usual this week.",pms,women
+"I'm experiencing sharp headaches and I feel very gassy and full.",pms,women
+"My mood is swinging from happy to devastated in a matter of minutes.",pms,women
+"I'm retaining so much water that my rings won't fit on my fingers.",pms,women
+"I feel very isolated and I just want to stay in bed all day.",pms,women
+"My digestion is all over the place with constipation then diarrhea.",pms,women
+"I'm having a hard time focusing on my work and I feel very foggy.",pms,women
+"Extreme breast tenderness and a general feeling of being unwell.",pms,women
+"I'm craving nothing but sweets and I'm feeling very irritable.",pms,women
+"My period is coming in a few days and I'm already feeling the cramps.",pms,women
+"I have deep pelvic pain that makes it hard to stand for long periods.",endometriosis,women
+"My periods are so painful that heating pads and pills don't help much.",endometriosis,women
+"I'm having sharp pains in my abdomen during ovulation and menstruation.",endometriosis,women
+"Painful urination and a constant heavy feeling in my lower belly.",endometriosis,women
+"I have a lot of pain during and after sexual activity.",endometriosis,women
+"My lower back and legs ache intensely during my monthly cycle.",endometriosis,women
+"I'm seeing blood in my urine during my period and have bad cramps.",endometriosis,women
+"I feel a lot of internal pressure and sharp stabs in my pelvis.",endometriosis,women
+"My flow is extremely heavy with large clots and agonizing pain.",endometriosis,women
+"I'm struggling with digestive issues that get much worse on my period.",endometriosis,women
+"The pelvic pain is becoming chronic and lasts for weeks at a time.",endometriosis,women
+"I have severe cramping that radiates down to my knees.",endometriosis,women
+"Feeling very fatigued from dealing with constant pelvic discomfort.",endometriosis,women
+"I'm having a lot of bloating and sharp stabs in my lower right side.",endometriosis,women
+"The pain in my abdomen is dull most of the time but becomes sharp suddenly.",endometriosis,women
+"I have a sharp, localized pain on one side of my pelvis that won't go away.",ovarian_cysts,women
+"Feeling very full and bloated in my lower stomach area lately.",ovarian_cysts,women
+"I'm getting a sudden, sharp twinge in my groin when I twist my body.",ovarian_cysts,women
+"There's a constant pressure on my bladder making me run to the bathroom.",ovarian_cysts,women
+"I have a dull, heavy ache in my pelvis that feels like a weight.",ovarian_cysts,women
+"My stomach looks swollen on one side and it's tender to the touch.",ovarian_cysts,women
+"I'm experiencing irregular spotting and sharp pelvic twinges.",ovarian_cysts,women
+"A lingering ache in my lower back that seems connected to my pelvis.",ovarian_cysts,women
+"I feel nauseated and have a dull pain in my lower left abdomen.",ovarian_cysts,women
+"Pain during bowel movements and a feeling of pelvic fullness.",ovarian_cysts,women
+"I'm noticing a sharp pain in my side during physical activity.",ovarian_cysts,women
+"The pressure in my pelvis is making it uncomfortable to sit down.",ovarian_cysts,women
+"I have a sense of heaviness in my abdomen that is very annoying.",ovarian_cysts,women
+"My lower stomach is very tender and I feel bloated all the time.",ovarian_cysts,women
+"I'm having sharp, intermittent pains in my pelvic region.",ovarian_cysts,women
+"I have a constant dull pressure in my pelvis and I feel very full.",ovarian_cysts,women
+"The pain feels like a tight rubber band is wrapped around my head.",tension_headache,general
+"My neck is very stiff and the pain is spreading to the base of my skull.",tension_headache,general
+"I've had a steady, non-pulsing headache across my brow all day.",tension_headache,general
+"My temples feel very tender and I have a dull ache in my head.",tension_headache,general
+"It feels like someone is pressing down on the top of my head.",tension_headache,general
+"The muscles in my shoulders are knotted and my head is aching.",tension_headache,general
+"I'm experiencing a dull, distracting headache that won't quit.",tension_headache,general
+"Both sides of my head are aching with a constant, mild pressure.",tension_headache,general
+"My head feels heavy and the pain is concentrated in my forehead.",tension_headache,general
+"I have a lingering headache that feels like a lot of tension.",tension_headache,general
+"The pain is mild but it makes it very hard to focus on my screen.",tension_headache,general
+"I'm feeling a tight squeeze around my forehead and back of my neck.",tension_headache,general
+"My scalp is sensitive to the touch and my head is dullly aching.",tension_headache,general
+"The headache started this morning and has been a steady pressure since.",tension_headache,general
+"I feel a lot of tightness in my jaw and a headache in my temples.",tension_headache,general
+"I'm seeing spots and one side of my head is throbbing violently.",migraine,general
+"Light is physically painful to look at and I feel very sick.",migraine,general
+"My head is pounding in sync with my pulse and I can't stand noise.",migraine,general
+"I have a visual aura of zigzagging lines and a severe headache.",migraine,general
+"I'm vomiting and the left side of my head is in absolute agony.",migraine,general
+"The throbbing in my temple is so bad I have to stay in the dark.",migraine,general
+"I feel very dizzy and have a sharp, stabbing pain behind my eye.",migraine,general
+"A rhythmic, intense pain on one side of my head is making me nauseous.",migraine,general
+"I'm experiencing a shimmering blind spot followed by a massive headache.",migraine,general
+"The pain is so intense that any movement makes me feel like throwing up.",migraine,general
+"I have a unilateral headache that feels like a constant pounding.",migraine,general
+"My skin feels sensitive and the light from my phone is unbearable.",migraine,general
+"I'm seeing flashing lights and my head is throbbing on the right side.",migraine,general
+"The headache is accompanied by a very strong sensitivity to smells.",migraine,general
+"I feel lightheaded and my head is pulsing with severe pain.",migraine,general
+"I'm shivering under three blankets but my skin is burning hot.",viral_fever,general
+"My whole body feels like it's been hit by a truck and I have a fever.",viral_fever,general
+"I have a dry cough, a very sore throat, and a high temperature.",viral_fever,general
+"My joints and muscles are aching and I feel incredibly weak.",viral_fever,general
+"I've lost my sense of taste and I'm running a fever of 102.",viral_fever,general
+"I'm sweating through my clothes and I have a pounding headache.",viral_fever,general
+"Feeling very congested and my body temperature is elevated.",viral_fever,general
+"I have no energy to even get out of bed and I feel feverish.",viral_fever,general
+"My eyes are burning and I have a constant low-grade fever.",viral_fever,general
+"I'm experiencing a lot of nausea and my body is very warm.",viral_fever,general
+"I have a scratchy throat and my temperature is rising steadily.",viral_fever,general
+"Feeling very faint and my skin is hot and dry to the touch.",viral_fever,general
+"My lymph nodes are swollen and I've developed a fever.",viral_fever,general
+"I'm coughing up yellow phlegm and feeling very hot.",viral_fever,general
+"General malaise and a temperature that won't go down with meds.",viral_fever,general
+"My skin is bright red and itchy after I touched a new detergent.",allergic_dermatitis,general
+"I have small, itchy blisters on my hands that are very painful.",allergic_dermatitis,general
+"My face is swollen and red after using a new cosmetic product.",allergic_dermatitis,general
+"I have a bumpy rash that appeared right where my watch sits.",allergic_dermatitis,general
+"The skin on my neck is burning and looks very irritated.",allergic_dermatitis,general
+"I'm getting hives all over my legs from walking through tall grass.",allergic_dermatitis,general
+"My hands are cracked and red after handling cleaning supplies.",allergic_dermatitis,general
+"I have a localized, itchy rash that looks like it's spreading.",allergic_dermatitis,general
+"The area where the adhesive bandage was is now red and bumpy.",allergic_dermatitis,general
+"My skin is peeling and itchy after using a new body wash.",allergic_dermatitis,general
+"I have a stinging, red rash on my arms from a new perfume.",allergic_dermatitis,general
+"My skin is reacting with redness and small fluid-filled bumps.",allergic_dermatitis,general
+"I'm seeing a lot of inflammation and itching on my wrists.",allergic_dermatitis,general
+"The skin around my lips is red and scaly from a new lip balm.",allergic_dermatitis,general
+"I have a very itchy, red patch of skin that feels very warm.",allergic_dermatitis,general
+"I have thick, scaly patches of skin that itch uncontrollably.",eczema,general
+"My skin is so dry it's cracking and bleeding on my knuckles.",eczema,general
+"I have a red, weepy rash in the bends of my arms.",eczema,general
+"The skin on my legs is very rough and has a silvery scale.",eczema,general
+"I'm experiencing an intense flare-up of itchy skin on my neck.",eczema,general
+"My hands are covered in dry, red patches that sting.",eczema,general
+"I have chronic skin irritation that gets worse when I'm stressed.",eczema,general
+"The skin behind my ears is flaky and very red.",eczema,general
+"I'm getting small, itchy bumps on my fingers that clear fluid.",eczema,general
+"My skin feels raw and tender after scratching the itchy spots.",eczema,general
+"I have very sensitive skin that turns red and itchy easily.",eczema,general
+"The rash on my ankles is very dark and the skin feels thick.",eczema,general
+"I'm struggling with persistent dry skin that won't stay moisturized.",eczema,general
+"My skin is peeling in patches and it's incredibly itchy.",eczema,general
+"I have a red, inflamed rash on my chest that is very scaly.",eczema,general
+"I have a red, itchy ring on my skin that is getting bigger.",fungal_skin_infection,general
+"The skin between my toes is white, soggy, and very itchy.",fungal_skin_infection,general
+"I have round, scaly patches on my arms that are very red.",fungal_skin_infection,general
+"My groin is very itchy and has a red, raised border.",fungal_skin_infection,general
+"I'm noticing white, splotchy patches on my back that don't tan.",fungal_skin_infection,general
+"The skin under my armpits is red, raw, and smells musty.",fungal_skin_infection,general
+"I have a fungal rash that looks like a cluster of small circles.",fungal_skin_infection,general
+"My toenails are thick, yellowed, and crumbling at the edges.",fungal_skin_infection,general
+"I have an itchy, red rash in the folds of my stomach.",fungal_skin_infection,general
+"The skin on the bottom of my feet is scaling and very dry.",fungal_skin_infection,general
+"I have a burning, itchy sensation in my groin area.",fungal_skin_infection,general
+"My scalp has itchy, flaky patches and some hair loss.",fungal_skin_infection,general
+"I'm seeing a red, spreading rash with a very clear edge.",fungal_skin_infection,general
+"The skin between my fingers is red, itchy, and peeling.",fungal_skin_infection,general
+"I have a persistent fungal infection that is making my skin raw.",fungal_skin_infection,general
+"I feel very weak and my bones ache whenever I move.",vitamin_d_deficiency,general
+"I'm losing a lot of hair and my mood has been very low lately.",vitamin_d_deficiency,general
+"My muscles feel sore and heavy, like I have no strength.",vitamin_d_deficiency,general
+"I'm getting sick with colds every few weeks and I'm tired.",vitamin_d_deficiency,general
+"I have persistent lower back pain that won't go away.",vitamin_d_deficiency,general
+"I feel very sluggish and I'm having trouble thinking clearly.",vitamin_d_deficiency,general
+"My joints feel stiff and painful, especially in the morning.",vitamin_d_deficiency,general
+"I'm experiencing a lot of fatigue despite resting all weekend.",vitamin_d_deficiency,general
+"My bones feel tender to the touch, especially in my legs.",vitamin_d_deficiency,general
+"I'm feeling very depressed and my body feels physically drained.",vitamin_d_deficiency,general
+"I have a lot of muscle twitches and a general feeling of weakness.",vitamin_d_deficiency,general
+"My wounds are very slow to heal and I feel constantly run down.",vitamin_d_deficiency,general
+"I'm noticing that my teeth and jaw feel a bit achy lately.",vitamin_d_deficiency,general
+"I have deep bone pain in my hips and I feel very exhausted.",vitamin_d_deficiency,general
+"I'm struggling with low immunity and constant muscle aches.",vitamin_d_deficiency,general
+"I have a sharp burning in my throat after I eat anything heavy.",acid_reflux,general
+"I'm tasting bile in my mouth and my chest feels very tight.",acid_reflux,general
+"I have a persistent dry cough that gets worse when I lie down.",acid_reflux,general
+"My stomach acid feels like it's rising into my esophagus.",acid_reflux,general
+"I'm experiencing painful heartburn right behind my breastbone.",acid_reflux,general
+"I have a sour taste in my mouth and I'm burping constantly.",acid_reflux,general
+"I feel like there is food stuck in my throat after I eat.",acid_reflux,general
+"My voice is very hoarse and I have a constant sore throat.",acid_reflux,general
+"I'm feeling nauseated and have a burning sensation in my upper belly.",acid_reflux,general
+"I have chest pain that makes me think I'm having a heart problem.",acid_reflux,general
+"I'm waking up at night choking on stomach acid.",acid_reflux,general
+"I have a lot of indigestion and my chest feels very warm.",acid_reflux,general
+"I'm burping up small amounts of food and acid regularly.",acid_reflux,general
+"My throat feels irritated and I have a lot of gas in my stomach.",acid_reflux,general
+"I have a burning feeling in my chest after drinking coffee.",acid_reflux,general
+"My mouth is very dry and I'm feeling incredibly lightheaded.",dehydration,general
+"I'm thirsty all the time and my urine is a dark amber color.",dehydration,general
+"I have a pounding headache and I feel very weak and dizzy.",dehydration,general
+"My skin doesn't go back down when I pinch it on my hand.",dehydration,general
+"I'm not urinating as much as usual and I feel very sluggish.",dehydration,general
+"I have a fast heart rate and my tongue feels very dry and sticky.",dehydration,general
+"I'm feeling very confused and I have a dry, scratchy throat.",dehydration,general
+"My eyes feel very dry and sunken and I have no energy.",dehydration,general
+"I'm experiencing muscle cramps in my legs and extreme thirst.",dehydration,general
+"I feel very hot but I'm not sweating even though I'm active.",dehydration,general
+"My blood pressure is low and I feel faint when I stand up.",dehydration,general
+"I have a persistent thirst that no amount of water seems to fix.",dehydration,general
+"I'm feeling very irritable and have a dull, throbbing headache.",dehydration,general
+"My urine output has dropped to almost nothing today.",dehydration,general
+"I feel very drained and my mouth feels like it's full of cotton.",dehydration,general
+"I'm so tired I can't even hold a conversation properly.",sleep_deprivation,general
+"My head is fuzzy and I'm making a lot of mistakes at work.",sleep_deprivation,general
+"I've been awake for over 24 hours and I feel very shaky.",sleep_deprivation,general
+"My eyes are stinging and I have dark circles that won't go away.",sleep_deprivation,general
+"I'm feeling very grumpy and everything is annoying me today.",sleep_deprivation,general
+"I keep nodding off for a few seconds without realizing it.",sleep_deprivation,general
+"My memory is shot and I can't remember what I did an hour ago.",sleep_deprivation,general
+"I have a constant dull headache from not sleeping enough.",sleep_deprivation,general
+"I'm feeling very uncoordinated and I keep tripping over things.",sleep_deprivation,general
+"My brain feels like it's in a fog and I'm yawning constantly.",sleep_deprivation,general
+"I'm craving junk food and I feel physically exhausted.",sleep_deprivation,general
+"I've had very poor sleep for a week and I feel very low.",sleep_deprivation,general
+"I'm struggling to stay awake while driving or sitting still.",sleep_deprivation,general
+"My reaction time is very slow and I feel mentally drained.",sleep_deprivation,general
+"I'm feeling very overwhelmed and my body feels very heavy.",sleep_deprivation,general
+"My heart is thumping and I feel a tight knot in my chest.",anxiety,general
+"I'm constantly worrying about things that might go wrong.",anxiety,general
+"I feel very restless, like I need to keep moving all the time.",anxiety,general
+"My hands are trembling and I'm sweating for no reason.",anxiety,general
+"I have a persistent sense of impending doom and panic.",anxiety,general
+"I'm breathing very shallowly and I feel like I can't get enough air.",anxiety,general
+"My mind is racing with 'what if' scenarios all day long.",anxiety,general
+"I feel very jumpy and my muscles are constantly tensed up.",anxiety,general
+"I'm having trouble focusing because I'm so preoccupied with worry.",anxiety,general
+"I have an upset stomach and a feeling of dread in my gut.",anxiety,general
+"I'm feeling very on edge and I'm snapping at people.",anxiety,general
+"I've been having panic attacks where my heart races and I sweat.",anxiety,general
+"I'm avoiding certain places because they make me feel nervous.",anxiety,general
+"I have cold, clammy hands and I'm feeling very uneasy.",anxiety,general
+"I'm struggling to sleep because I'm worrying about the next day.",anxiety,general

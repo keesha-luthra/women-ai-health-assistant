@@ -10,7 +10,7 @@ async function submitSymptoms() {
   }
 
   resultDiv.classList.remove("hidden");
-  resultDiv.innerHTML = "<em>Loading...</em>";
+  resultDiv.innerHTML = "<em>Analyzing...</em>";
 
   const formData = new FormData();
   formData.append("symptoms", symptoms);
@@ -30,13 +30,24 @@ async function submitSymptoms() {
     }
 
     const data = await response.json();
-    displayResult(data);
+    renderResult(data);
+
   } catch (error) {
     resultDiv.innerHTML = "Something went wrong. Please try again.";
   }
 }
 
-function displayResult(data) {
+/* ---------------- CONFIDENCE LABEL ---------------- */
+
+function confidenceLabel(confidence) {
+  if (confidence >= 0.75) return "High";
+  if (confidence >= 0.6) return "Moderate";
+  return "Low";
+}
+
+/* ---------------- RENDER RESULT ---------------- */
+
+function renderResult(data) {
   const resultDiv = document.getElementById("result");
   resultDiv.innerHTML = "";
 
@@ -47,12 +58,19 @@ function displayResult(data) {
 
   const ml = data.ml_result;
 
-  /* ---------- ML RESULT ---------- */
+  // ✅ Backend already gives 0–1 confidence
+  const confidencePct = (ml.confidence * 100).toFixed(1);
+  const confidenceText = confidenceLabel(ml.confidence);
+
+  /* ---------- MODEL ASSESSMENT ---------- */
   resultDiv.innerHTML += `
     <div class="section">
-      <div class="section-title">ML Prediction</div>
+      <div class="section-title">Model Assessment</div>
       <p><strong>Possible condition:</strong> ${ml.prediction}</p>
-      <p><strong>Confidence:</strong> ${ml.confidence.toFixed(1)}%</p>
+      <p>
+        <strong>Confidence:</strong>
+        ${confidenceText} (${confidencePct}%)
+      </p>
     </div>
   `;
 
@@ -60,7 +78,7 @@ function displayResult(data) {
   if (ml.used_image) {
     resultDiv.innerHTML += `
       <div class="section">
-        <div class="section-title">Image Used</div>
+        <div class="section-title">Image Signal</div>
         <p>The uploaded image was used as a supporting signal.</p>
       </div>
     `;
@@ -75,31 +93,31 @@ function displayResult(data) {
     `;
   }
 
-  /* ---------- LLM / FOLLOW-UP LOGIC ---------- */
+  /* ---------- AI SAFE MODE / FOLLOW-UPS ---------- */
   if (data.llm) {
+    if (data.llm.type === "safe_mode") {
+      resultDiv.innerHTML += `
+        <div class="safe-box section">
+          <strong>🛡️ AI Safe Mode</strong>
+          <p>${data.llm.content}</p>
+        </div>
+      `;
+    }
+
     if (data.llm.type === "followup") {
       resultDiv.innerHTML += `
-        <div class="section followup-box">
-          <div class="section-title">We need a bit more information 💬</div>
+        <div class="safe-box section">
+          <strong>🤖 Follow-up Questions</strong>
           <p>${data.llm.content}</p>
         </div>
       `;
     }
 
-    else if (data.llm.type === "safe_mode") {
+    if (data.llm.type === "unavailable") {
       resultDiv.innerHTML += `
-        <div class="section warning">
-          <div class="section-title">AI Safe Mode</div>
+        <div class="safe-box section">
+          <strong>AI Notice</strong>
           <p>${data.llm.content}</p>
-        </div>
-      `;
-    }
-
-    else if (data.llm.type === "unavailable") {
-      resultDiv.innerHTML += `
-        <div class="section warning">
-          <div class="section-title">AI Safe Mode</div>
-          <p>AI follow-up questions are currently unavailable.</p>
         </div>
       `;
     }
@@ -108,7 +126,7 @@ function displayResult(data) {
   /* ---------- DISCLAIMER ---------- */
   if (data.disclaimer) {
     resultDiv.innerHTML += `
-      <div class="disclaimer">
+      <div class="disclaimer section">
         ${data.disclaimer}
       </div>
     `;
