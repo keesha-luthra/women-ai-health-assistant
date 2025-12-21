@@ -106,13 +106,3 @@ The project focuses on **responsible AI**, avoiding overconfident medical claims
 Mediva is **not a medical diagnostic tool**.  
 It is designed for **educational and exploratory purposes only**.  
 Users are encouraged to consult qualified healthcare professionals for medical advice.
-
----
-
-## 📌 Why This Project Is Resume-Worthy
-
-- Demonstrates **end-to-end ML system design**
-- Shows understanding of **ethical AI & safety**
-- Combines **ML + LLMs** responsibly
-- Real-world healthcare constraints handled correctly
-- Clean architecture suitable for scaling
