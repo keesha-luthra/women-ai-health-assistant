@@ -41,7 +41,7 @@ The project focuses on **responsible AI**, avoiding overconfident medical claims
 - No unnecessary warnings
 - Clean, interpretable response
 
-📸 `screenshots/1.jpg`
+![General Health Mode](screenshots/1.png)
 
 ---
 
@@ -54,7 +54,7 @@ The project focuses on **responsible AI**, avoiding overconfident medical claims
 - No condition asserted
 - AI-generated follow-up questions shown
 
-📸 `screenshots/2.jpg`
+![AI Safe Mode](screenshots/2.png)
 
 ---
 
@@ -67,7 +67,7 @@ The project focuses on **responsible AI**, avoiding overconfident medical claims
 - Appropriate disclaimer included
 - Confidence shown transparently
 
-📸 `screenshots/3.jpg`
+![Women-Specific Mode](screenshots/3.png)
 
 ---
 
